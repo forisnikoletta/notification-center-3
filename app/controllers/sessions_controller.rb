@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
 	include CurrentUserConcern
 
 	def create
-	 	#it will wrap up a user object
+	 	#it will wrap up a user object so
 	 	user = User
 	 			.find_by(email: params["user"]["email"])
 	 			.try(:authenticate, params["user"]["password"])
