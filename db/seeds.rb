@@ -14,3 +14,8 @@ Notification.create(title: 'title 7', body: 'body 7', user_id: '3')
 Notification.create(title: 'title 8', body: 'body 8', user_id: '2')
 Notification.create(title: 'title 9', body: 'body 9', user_id: '2')
 Notification.create(title: 'title 10', body: 'body 10', user_id: '2')
+
+User.create(email: "admin@mail.com", password: "123456", password_confirmation: "123456")
+User.create(email: "client1@mail.com", password: "123456", password_confirmation: "123456")
+User.create(email: "client2@mail.com", password: "123456", password_confirmation: "123456")
+User.create(email: "client3@mail.com", password: "123456", password_confirmation: "123456")
