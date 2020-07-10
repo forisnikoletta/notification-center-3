@@ -1,5 +1,6 @@
 class NotificationController < ApplicationController
 	before_action :set_notification, only: [:show, :update, :destroy]
+	before_action :ensure_client_user!
 
 	include CurrentUserConcern
 
@@ -28,6 +29,14 @@ class NotificationController < ApplicationController
       @notification.update_attributes(:seen => Time.now)
     end
     render json: @notification
+  end
+
+  def ensure_client_user!
+    unless User.find(session[:user_id]).roles == "client"
+      render json: {
+        status: 403
+      }
+    end
   end
 
   private
