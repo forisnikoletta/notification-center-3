@@ -11,6 +11,9 @@ class SessionsController < ApplicationController
 
 	 	if user
 	 		session[:user_id] = user.id
+			puts user.id 
+	 		puts user.roles
+	 		session[:user_roles] = user.roles
 	 		render json: {
 	 			status: :created,
 	 			logged_in: true,
