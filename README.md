@@ -2,7 +2,7 @@
 
 
 Hi! This is a simple **Notification Center** backend API, where
-- Admins are be able to create notifications to Clients
+- Admins are able to create notifications to Clients
 - Clients are able to use the REST API to get their notifications
 - Admins will know if a particular notification was seen
 
@@ -50,5 +50,5 @@ curl --header "Content-Type: application/json" --request DELETE http://localhost
 
 -   You will need to replace the domains from "some-name.something.com" to your production domain
 
-- You will need to add `withCredentials: true` in the LogIn/ Log out/ Registration handler where the form is submitted (it will tell the application that it's ok to set the cookie for the api). Without this setting the authentication will not work)
+- You will need to add `withCredentials: true` in the Log in/ Log out/ Registration handler where the form is submitted (it will tell the application that it's ok to set the cookie for the api). Without this setting the authentication will not work)
 
